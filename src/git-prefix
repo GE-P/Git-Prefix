@@ -1,0 +1,35 @@
+#!/bin/sh
+
+# Name: Git-prefix 
+# Author: Gerhard Eibl
+# Creation date: 06/10/2023
+# version: 1.1.0
+
+GREEN="\e[32m"
+ENDCOLOR="\e[0m"
+BLUE="\e[1;34m"
+GREY="\e[1;30m"
+
+echo -e "\n${GREEN}Voici les prefixs autorisés :${ENDCOLOR}"
+
+echo -e  "
+- fix        ${GREY}-> correctif utilisateur${ENDCOLOR} 
+- feat-M     ${GREY}-> nouvelle fonctionnalité majeure${ENDCOLOR}
+- feat       ${GREY}-> nouvelle fonctionnalité utilisateur${ENDCOLOR} 
+- ci         ${GREY}-> modification relative à la CI-CD${ENDCOLOR} 
+- perf       ${GREY}-> amélioration de la performance${ENDCOLOR} 
+- revert     ${GREY}-> revenir à un commit${ENDCOLOR} 
+- docs       ${GREY}-> modification de la documentation${ENDCOLOR} 
+- style      ${GREY}-> modification de la forme du code : indentation, etc. le code de production reste inchangé${ENDCOLOR} 
+- refactor   ${GREY}-> remaniement du code de production, comme le renommage d'une variable${ENDCOLOR} 
+- test       ${GREY}-> ajout de test manquant, remaniement des tests${ENDCOLOR} 
+- chore      ${GREY}-> mise-à-jour des tâches sans rapport avec le code de production${ENDCOLOR} 
+- wip        ${GREY}-> work in progress${ENDCOLOR} 
+- version    ${GREY}-> numéro de la version${ENDCOLOR} 
+- build      ${GREY}-> modification des fichiers de build${ENDCOLOR} 
+- git        ${GREY}-> ajout gitignore, modification de l'index, etc${ENDCOLOR} 
+- merge      ${GREY}-> lorsque l'on merge une branche${ENDCOLOR} "
+
+echo -e "\nConvention d'un commit : ${BLUE}<Prefix>(<Scope optionnel>): Message${ENDCOLOR}\n"
+
+
